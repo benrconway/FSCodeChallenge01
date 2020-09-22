@@ -1,44 +1,50 @@
 export const cakes = [
-    {
-        id: 1,
-        name: "Sernik",
-        comment: "The Polish king of cheesecakes",
-        imageUrl: "data:image/jpeg;base64,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",
-        yumFactor: 5
-    },
-    {
-        id: 2,
-        name: "Rocket Cake!",
-        comment: "Makes you feel spacey",
-        imageUrl: "https://sweetsomethingsdesserts.com/wp-content/uploads/2017/11/Rocket-Cake-900x675.jpg",
-        yumFactor: 4
-    },
-    {
-        id: 3,
-        name: "Ladybird Cake",
-        comment: "The spotty wonder will be celebrated in gardens everywhere",
-        imageUrl: "https://www.ilovecooking.ie/wp-content/uploads/2014/05/rsz_ladybug_cake_.jpg",
-        yumFactor: 4
-    },
-    {
-        id: 4,
-        name: "Triple Chocolate SURPRISE!",
-        comment: "The surprise is more chocolate inside :)",
-        imageUrl: "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2013/04/triple-chocolate-cake-4.jpg",
-        yumFactor: 4
-    },
-    {
-        id: 5,
-        name: "Scone",
-        comment: "My only problem is remembering how to pronounce it",
-        imageUrl: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/easy-scone-recipe-1585305910.jpg",
-        yumFactor: 4
-    },
-    {
-        id: 6,
-        name: "Carrot Cake",
-        comment: "A staple for any good cafe/bakery",
-        imageUrl: "https://hips.hearstapps.com/vidthumb/images/carrot-cake-horozontal-1520010595.jpg",
-        yumFactor: 4
-    },
-]
+  {
+    id: 1,
+    name: "Sernik",
+    comment: "The Polish king of cheesecakes",
+    imageUrl:
+      "https://www.thespruceeats.com/thmb/JfpuoNpo5AF6cLGEFv7B8zG5pzE=/640x360/smart/filters:no_upscale()/polish-americancheesecakeslice-592307a35f9b58f4c0151b71.jpg",
+    yumFactor: 5,
+  },
+  {
+    id: 2,
+    name: "Rocket Cake!",
+    comment: "Makes you feel spacey",
+    imageUrl:
+      "https://sweetsomethingsdesserts.com/wp-content/uploads/2017/11/Rocket-Cake-900x675.jpg",
+    yumFactor: 4,
+  },
+  {
+    id: 3,
+    name: "Ladybird Cake",
+    comment: "The spotty wonder will be celebrated in gardens everywhere",
+    imageUrl:
+      "https://www.ilovecooking.ie/wp-content/uploads/2014/05/rsz_ladybug_cake_.jpg",
+    yumFactor: 4,
+  },
+  {
+    id: 4,
+    name: "Triple Chocolate SURPRISE!",
+    comment: "The surprise is more chocolate inside :)",
+    imageUrl:
+      "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2013/04/triple-chocolate-cake-4.jpg",
+    yumFactor: 4,
+  },
+  {
+    id: 5,
+    name: "Scone",
+    comment: "My only problem is remembering how to pronounce it",
+    imageUrl:
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/easy-scone-recipe-1585305910.jpg",
+    yumFactor: 4,
+  },
+  {
+    id: 6,
+    name: "Carrot Cake",
+    comment: "A staple for any good cafe/bakery",
+    imageUrl:
+      "https://hips.hearstapps.com/vidthumb/images/carrot-cake-horozontal-1520010595.jpg",
+    yumFactor: 4,
+  },
+];
