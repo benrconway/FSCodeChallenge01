@@ -11,4 +11,10 @@ router.get("/:id", function (req, res) {
   res.send(selectedCake);
 });
 
+router.post("/", function (req, res) {});
+
+router.put("/:id", function (req, res) {});
+
+router.delete("/:id", function (req, res) {});
+
 module.exports = router;
