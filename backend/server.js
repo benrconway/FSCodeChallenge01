@@ -1,14 +1,14 @@
+var express = require("express");
+var app = express();
+var bodyParser = require("body-parser");
 
-var express = require('express')
-var app = express()
-var bodyParser = require('body-parser')
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 
-app.use(bodyParser.json())
-
-app.get('/', function (req, res) {
-    res.redirect('http://localhost:3000')
-})
+app.get("/", function (req, res) {
+  res.redirect("http://localhost:3000");
+});
 
 app.listen(process.env.PORT || 3030, function () {
-  console.log('Backend running')
-})
+  console.log("Backend running");
+});
