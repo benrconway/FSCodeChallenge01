@@ -1,4 +1,4 @@
-export const cakes = [
+module.exports = [
   {
     id: 1,
     name: "Sernik",
