@@ -7,7 +7,11 @@ router.get("/", function (req, res) {
 });
 
 router.get("/:id", function (req, res) {
-  const selectedCake = cakesData.find((cake) => cake.id === req.params.id);
+  const suppliedId = Number(req.params.id);
+  if (isNaN(suppliedId)) {
+    res.status(400).send("Sorry, something went terribly wrong");
+  }
+  const selectedCake = cakesData.find((cake) => cake.id === suppliedId);
   res.send(selectedCake);
 });
 
