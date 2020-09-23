@@ -1,16 +1,26 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:3030";
+const baseURL = "http://localhost:3010";
 const requestHelper = axios.create({
   baseURL,
 });
 
-function getData(endpoint) {}
+async function getData(endpoint) {
+  requestHelper
+    .get(endpoint)
+    .then(function (response) {
+      return response.data;
+    })
+    .catch(function (error) {
+      console.log(error);
+      return error;
+    });
+}
 
-function postData(endpoint, data) {}
+async function postData(endpoint, data) {}
 
-function putData(endpoint, data) {}
+async function putData(endpoint, data) {}
 
-function deleteData(endpoint, data) {}
+async function deleteData(endpoint, data) {}
 
 export { getData, postData, putData, deleteData };
