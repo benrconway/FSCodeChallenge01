@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Home, About, SingleCake } from "../../pages";
 
-export default function Main() {
+export default function Main({ data }) {
   return (
     <main>
       <Switch>
@@ -13,7 +13,7 @@ export default function Main() {
           <SingleCake />
         </Route>
         <Route path="/">
-          <Home />
+          <Home cakes={data} />
         </Route>
       </Switch>
     </main>

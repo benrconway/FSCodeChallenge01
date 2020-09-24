@@ -1,4 +1,5 @@
-import Header from "./Header";
-import Main from "./Main";
+import Header from "./header/header";
+import Main from "./main/main";
+import CakeTile from "./cakeTile/cakeTile";
 
-export { Header, Main };
+export { Header, Main, CakeTile };

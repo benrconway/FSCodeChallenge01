@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders appropriate home screen in app component", () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/Home screen/i);
+  const linkElement = getByText(/Cake list/i);
   expect(linkElement).toBeInTheDocument();
 });

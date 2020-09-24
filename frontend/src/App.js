@@ -20,7 +20,7 @@ export default function App() {
   return (
     <Router>
       <Header />
-      <Main />
+      <Main data={data} />
     </Router>
   );
 }

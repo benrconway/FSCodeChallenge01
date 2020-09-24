@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { render } from "@testing-library/react";
-import Header from "./";
+import Header from "./header";
 
 test("renders header title", () => {
   const { getByText } = render(
