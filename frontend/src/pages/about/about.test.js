@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import About from "./";
+import About from "./about";
 
 test("renders about screen", () => {
   const { getByText } = render(<About />);
