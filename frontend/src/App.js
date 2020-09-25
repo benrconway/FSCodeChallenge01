@@ -14,7 +14,6 @@ export default function App() {
 
   React.useEffect(() => {
     loadData();
-    return () => {};
   }, []);
 
   return (
