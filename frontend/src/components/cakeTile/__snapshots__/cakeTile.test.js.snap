@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders CakeTile screen 1`] = `
+<a
+  href="/cakes/1"
+>
+  More details
+</a>
+`;
