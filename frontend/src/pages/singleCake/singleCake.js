@@ -13,7 +13,6 @@ export default function SingleCake() {
   };
 
   const displayCake = (cake) => {
-    console.log(cake);
     if (!cake || cake.name === undefined) {
       return <p>Cake is still baking</p>;
     }
