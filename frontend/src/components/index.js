@@ -1,5 +1,6 @@
 import Header from "./header/header";
 import Main from "./main/main";
 import CakeTile from "./cakeTile/cakeTile";
+import addCakeForm from "./addCakeForm";
 
-export { Header, Main, CakeTile };
+export { Header, Main, CakeTile, addCakeForm };
