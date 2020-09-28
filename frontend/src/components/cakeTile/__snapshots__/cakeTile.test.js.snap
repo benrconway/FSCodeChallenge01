@@ -1,9 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders CakeTile screen 1`] = `
-<a
-  href="/cakes/1"
->
-  More details
-</a>
+exports[`renders CakeTile with complete details 1`] = `
+<DocumentFragment>
+  <div
+    class="cake-tile"
+  >
+    <img
+      alt="__TEST_CAKE__"
+      class="cake-tile-image"
+      src="__TEST_URL__"
+    />
+    <p>
+      __TEST_CAKE__
+    </p>
+    <p>
+      Yum Factor: 5
+    </p>
+    <p>
+      __TEST_COMMENT__
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders CakeTile with partial details 1`] = `
+<DocumentFragment>
+  <div
+    class="cake-tile"
+  >
+    <img
+      alt="__TEST_CAKE__"
+      class="cake-tile-image"
+      src="__TEST_URL__"
+    />
+    <p>
+      __TEST_CAKE__
+    </p>
+    <a
+      href="/cakes/1"
+    >
+      More details
+    </a>
+  </div>
+</DocumentFragment>
 `;
