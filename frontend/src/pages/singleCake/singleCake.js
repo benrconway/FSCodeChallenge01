@@ -9,7 +9,7 @@ export default function SingleCake() {
 
   const displayCake = (cake) => {
     if (!cake || cake.name === undefined) {
-      return <p>Cake is still baking</p>;
+      return <p>Please wait, your cake is still baking</p>;
     }
     return (
       <CakeTile
