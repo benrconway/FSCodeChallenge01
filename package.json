@@ -1,0 +1,25 @@
+{
+  "name": "Waracle",
+  "version": "1.0.0",
+  "description": "This is my fulfillment of the Full Stack code challenge.",
+  "main": "index.js",
+  "scripts": {
+    "backend": "npm run --prefix backend start",
+    "frontend": "npm run --prefix frontend start",
+    "start": "concurrently \"npm:backend\" \"npm:frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benrconway/FSCodeChallenge01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benrconway/FSCodeChallenge01/issues"
+  },
+  "homepage": "https://github.com/benrconway/FSCodeChallenge01#readme",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
