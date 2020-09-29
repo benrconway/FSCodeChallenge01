@@ -3,6 +3,8 @@ const {
   getOneById,
   getAll,
   saveOne,
+  updateOne,
+  deleteOne,
 } = require("../helpers/mongodbHelper/mongodbHelper");
 
 const router = express.Router();
@@ -40,7 +42,9 @@ router.put("/:id", function (req, res) {
   if (isNaN(suppliedId)) {
     res.sendStatus(400);
   }
-  res.status(200).send(req.body);
+  updateOne(req.body, function (cake) {
+    res.send(cake);
+  });
 });
 
 router.delete("/:id", function (req, res) {
@@ -48,7 +52,12 @@ router.delete("/:id", function (req, res) {
   if (isNaN(suppliedId)) {
     res.sendStatus(400);
   }
-  res.status(204).send();
+  deleteOne(suppliedId, function (response) {
+    if (response.deletedCount > 0) {
+      res.status(204).send("Item has been deleted.");
+    }
+    res.sendStatus(404);
+  });
 });
 
 module.exports = router;

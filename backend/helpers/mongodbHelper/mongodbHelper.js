@@ -53,11 +53,47 @@ const saveOne = (cake, callback) => {
   });
 };
 
+const updateOne = (cake, callback) => {
+  MongoClient.connect(url, connectionOptions, function (err, client) {
+    const collection = client
+      .db(process.env.DB_NAME)
+      .collection(process.env.DB_COLLECTION);
+    const cursor = collection
+      .findOneAndUpdate(
+        { id: cake.id },
+        { $set: cake },
+        { upsert: true, returnNewDocument: true }
+      )
+      .then((result) => {
+        callback(result.value);
+      })
+      .catch((err) => console.log(err));
+    client.close();
+  });
+};
+
+const deleteOne = (id, callback) => {
+  MongoClient.connect(url, connectionOptions, function (err, client) {
+    const collection = client
+      .db(process.env.DB_NAME)
+      .collection(process.env.DB_COLLECTION);
+    const cursor = collection
+      .deleteOne({ id })
+      .then((result) => {
+        callback(result);
+      })
+      .catch((err) => console.log(err));
+    client.close();
+  });
+};
+
 module.exports = {
   getOneById,
   getAll,
   saveOne,
+  updateOne,
+  deleteOne,
 };
 
-// TODO: expand functionality for PUT and DELETE requests.
 // TODO: explore options to DRY above code.
+// TODO: capture errors in a Sentry-like solution.
