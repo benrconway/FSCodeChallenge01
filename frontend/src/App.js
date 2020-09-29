@@ -15,7 +15,6 @@ export default function App() {
 
   React.useEffect(() => {
     const loadData = async () => {
-      console.log(data);
       if (!data) {
         const res = await getData("/cakes");
         setData(res);

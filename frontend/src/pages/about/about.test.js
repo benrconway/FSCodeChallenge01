@@ -4,6 +4,6 @@ import About from "./about";
 
 test("renders about screen", () => {
   const { getByText } = render(<About />);
-  const linkElement = getByText(/About screen/i);
-  expect(linkElement).toBeInTheDocument();
+  const titleElement = getByText(/About screen/i);
+  expect(titleElement).toBeInTheDocument();
 });

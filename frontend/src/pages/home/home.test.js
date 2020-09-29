@@ -4,6 +4,6 @@ import Home from "./home";
 
 test("renders home screen", () => {
   const { getByText } = render(<Home cakes={[]} />);
-  const linkElement = getByText(/Cake list/i);
-  expect(linkElement).toBeInTheDocument();
+  const titleElement = getByText(/Cake list/i);
+  expect(titleElement).toBeInTheDocument();
 });

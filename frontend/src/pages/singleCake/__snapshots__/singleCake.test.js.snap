@@ -3,6 +3,9 @@
 exports[`renders single cake screen 1`] = `
 <DocumentFragment>
   <div>
+    <button>
+      &lt; Back
+    </button>
     <div
       class="cake-tile"
     >

@@ -16,7 +16,6 @@ const customStyles = {
 if (process.env.NODE_ENV !== "test") Modal.setAppElement("#root");
 
 export default function Home({ cakes, updateData }) {
-  console.log(cakes);
   let subtitle;
   const newCakeId = cakes ? cakes.length + 1 : 0;
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
