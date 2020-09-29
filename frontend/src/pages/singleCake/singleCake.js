@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { getData } from "../../utils";
-import { CakeTile } from "../../components";
+import { CakeTile, BackButton } from "../../components";
 
 export default function SingleCake() {
   const { id } = useParams();
@@ -28,5 +28,10 @@ export default function SingleCake() {
     loadData();
   }, [id]);
 
-  return <div>{displayCake(cake)}</div>;
+  return (
+    <div>
+      <BackButton />
+      {displayCake(cake)}
+    </div>
+  );
 }
