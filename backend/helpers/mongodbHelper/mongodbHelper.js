@@ -53,5 +53,11 @@ const saveOne = (cake, callback) => {
   });
 };
 
+module.exports = {
+  getOneById,
+  getAll,
+  saveOne,
+};
+
 // TODO: expand functionality for PUT and DELETE requests.
 // TODO: explore options to DRY above code.
