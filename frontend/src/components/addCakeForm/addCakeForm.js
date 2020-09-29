@@ -1,44 +1,46 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { postData } from "../../utils";
 
 const fields = {
-  CAKE_NAME: "cakeName",
+  NAME: "name",
   COMMENT: "comment",
   YUMFACTOR: "yumFactor",
   IMAGE_URL: "imageUrl",
 };
 
 const initialValues = {
-  cakeName: "",
+  name: "",
   comment: "",
   yumFactor: "",
   imageUrl: "",
 };
 
 const validationSchema = Yup.object({
-  cakeName: Yup.string().required("Required"),
+  name: Yup.string().required("Required"),
   comment: Yup.string().required("Required"),
   yumFactor: Yup.string().required("Required"),
   imageUrl: Yup.string().required("Required"),
 });
 
-export default function addCakeForm() {
+export default function AddCakeForm({ newCakeId, updateData, closeModal }) {
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
+      onSubmit={async (values, { setSubmitting }) => {
+        values.id = newCakeId;
+        const response = await postData("/cakes", values);
+        setSubmitting(false);
+        updateData(response);
+        closeModal();
       }}
     >
       <Form>
-        <label htmlFor={fields.CAKE_NAME}>Cake Name</label>
-        <Field name={fields.CAKE_NAME} type="text" />
-        <ErrorMessage name={fields.CAKE_NAME} />
+        <label htmlFor={fields.NAME}>Cake Name</label>
+        <Field name={fields.NAME} type="text" />
+        <ErrorMessage name={fields.NAME} />
         <label htmlFor={fields.COMMENT}>Comment</label>
         <Field name={fields.COMMENT} type="text" />
         <ErrorMessage name={fields.COMMENT} />

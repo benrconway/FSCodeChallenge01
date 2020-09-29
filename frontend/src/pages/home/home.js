@@ -1,8 +1,39 @@
 import React from "react";
-import { CakeTile } from "../../components";
+import Modal from "react-modal";
+import { CakeTile, AddCakeForm } from "../../components";
 
-export default function Home({ cakes }) {
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+
+Modal.setAppElement("#root");
+
+export default function Home({ cakes, updateData }) {
+  console.log(cakes);
+  let subtitle;
+  const newCakeId = cakes ? cakes.length + 1 : 0;
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
+
+  const openModal = () => setModalIsOpen(true);
+
+  const closeModal = () => setModalIsOpen(false);
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = "black";
+  }
+
   const loadPage = () => {
+    if (!cakes) {
+      return <p>Cakes are still baking</p>;
+    }
     // in case of an error being passed down
     if (cakes.status && cakes.status > 400) {
       return (
@@ -10,9 +41,6 @@ export default function Home({ cakes }) {
       );
     }
     // if cakes is undefined, loading is true and display loading message
-    if (!cakes) {
-      return <p>Cakes are still baking</p>;
-    }
     // else if cakes will be an array, loading is false and replace with a bunch of cake tiles.
     return cakes.map((cake) => (
       <CakeTile cake={cake} key={`${cake.name}-${cake.id}`} />
@@ -21,8 +49,30 @@ export default function Home({ cakes }) {
 
   return (
     <div>
-      <p>Cake List</p>
+      <div className="flex-title">
+        <h2>Cake List</h2>
+        {/* <AddCakeLink /> */}
+        <button onClick={openModal}>Add New Cake</button>
+      </div>
+
       {loadPage()}
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="New Cake Form"
+      >
+        <div className="flex-title">
+          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>New Cake Form</h2>
+          <button onClick={closeModal}>X</button>
+        </div>
+        <AddCakeForm
+          newCakeId={newCakeId}
+          updateData={updateData}
+          closeModal={closeModal}
+        />
+      </Modal>
     </div>
   );
 }

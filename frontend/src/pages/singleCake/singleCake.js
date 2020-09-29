@@ -5,7 +5,7 @@ import { CakeTile } from "../../components";
 
 export default function SingleCake() {
   const { id } = useParams();
-  const [cake, setCake] = React.useState([]);
+  const [cake, setCake] = React.useState();
 
   const loadData = async () => {
     const res = await getData(`/cakes/${id}`);

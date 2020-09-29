@@ -5,21 +5,29 @@ import { Header, Main } from "./components";
 import { getData } from "./utils";
 
 export default function App() {
-  const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState();
 
-  const loadData = async () => {
-    const res = await getData("/cakes");
-    setData(res);
+  const updateData = (newData) => {
+    const updatedData = data;
+    updatedData.push(newData);
+    setData(updatedData);
   };
 
   React.useEffect(() => {
+    const loadData = async () => {
+      console.log(data);
+      if (!data) {
+        const res = await getData("/cakes");
+        setData(res);
+      }
+    };
     loadData();
-  }, []);
+  }, [data]);
 
   return (
     <Router>
       <Header />
-      <Main data={data} />
+      <Main data={data} updateData={updateData} />
     </Router>
   );
 }
