@@ -7,11 +7,6 @@ export default function SingleCake() {
   const { id } = useParams();
   const [cake, setCake] = React.useState();
 
-  const loadData = async () => {
-    const res = await getData(`/cakes/${id}`);
-    setCake(res);
-  };
-
   const displayCake = (cake) => {
     if (!cake || cake.name === undefined) {
       return <p>Cake is still baking</p>;
@@ -26,8 +21,12 @@ export default function SingleCake() {
   };
 
   React.useEffect(() => {
+    const loadData = async () => {
+      const res = await getData(`/cakes/${id}`);
+      setCake(res);
+    };
     loadData();
-  }, []);
+  }, [id]);
 
   return <div>{displayCake(cake)}</div>;
 }

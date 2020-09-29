@@ -13,7 +13,7 @@ const customStyles = {
   },
 };
 
-Modal.setAppElement("#root");
+if (process.env.NODE_ENV !== "test") Modal.setAppElement("#root");
 
 export default function Home({ cakes, updateData }) {
   console.log(cakes);
