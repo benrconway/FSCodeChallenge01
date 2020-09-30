@@ -29,22 +29,22 @@ A frontend that fulfills the following functionality:
 
 ## Progression of production
 
-- Understanding product definition
-- Defining goals and workflow
-- Setup Backend project (Express Server)
-- Setup Frontend project (React app)
-- Add router for '/cakes' endpoint
-- Manual test of functionality server functionality using Postman
-- Create basic page structure
-- Introduce Routing with react-router-dom package
-- Connect frontend to backend
-- Display returned cake list information
-- Display singular cake information
-- Add form within a modal for creating a new cake
-- Manually test that all functionality now exists
-- Failure of previous point led to adding cloud based MongoDB persistence layer
-- Retest of functionality
-- Test of functionality on Mobile (currently failed and being looked into, see **Know problems** below)
+- [x] Understanding product definition
+- [x] Defining goals and workflow
+- [x] Setup Backend project (Express Server)
+- [x] Setup Frontend project (React app)
+- [x] Add router for '/cakes' endpoint
+- [x] Manual test of functionality server functionality using Postman
+- [x] Create basic page structure
+- [x] Introduce Routing with react-router-dom package
+- [x] Connect frontend to backend
+- [x]. Display returned cake list information
+- [x]. Display singular cake information
+- [x]. Add form within a modal for creating a new cake
+- [x]. Manually test that all functionality now exists
+- [x]. Failure of previous point led to adding cloud based MongoDB persistence layer
+- [x]. Retest of functionality
+- [x]. Test of functionality on Mobile (currently failed and being looked into, see **Know problems** below)
 
 ## Known problems and next steps
 
