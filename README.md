@@ -7,9 +7,13 @@ Being a full stack challenge, it requires also the creation of a simple REST API
 
 In the documentation below I have the following sections:
 [Expected Functionality, what I was given to build.](#Expected-functionality)
+
 [Progression of production, bullet points on how I went about the project](#Progression-of-production)
+
 [Known problems and next steps, known bugs and next things to tackle and make this project better](#Known-problems-and-next-steps)
+
 [Lessons learnt during completion, main points of new learning that occurred during the creation of this project](#Lessons-learnt-during-completion)
+
 [How to run, the commands used to run the project](#How-to-run)
 
 ## Expected functionality
