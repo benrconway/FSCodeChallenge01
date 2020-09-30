@@ -1,11 +1,12 @@
 # Code Challenge
 
-This is my fulfillment of the Full Stack code challenge.
+This is my fulfillment of the full stack code challenge.
 
 Create a Progressive Web App(PWA) about delicious cakes and allow a user to add their own cakes to the list.
-Being a full stack challenge, it requires also the creation of a simple REST API to serve information to the PWA.
+Being a full stack challenge, it also required the creation of a simple REST API to serve information to the PWA.
 
 In the documentation below I have the following sections:
+
 [Expected Functionality, what I was given to build.](#Expected-functionality)
 
 [Progression of production, bullet points on how I went about the project](#Progression-of-production)
@@ -18,7 +19,7 @@ In the documentation below I have the following sections:
 
 ## Expected functionality
 
-API that has REST standard GET, POST, PUT and DELETE requests related to the cake information.
+An API that has REST standard CRUD functionality in the form of GET, POST, PUT and DELETE requests.
 
 A frontend that fulfills the following functionality:
 
@@ -28,22 +29,22 @@ A frontend that fulfills the following functionality:
 
 ## Progression of production
 
-Understanding product definition
-Defining goals and workflow
-Setup Backend project (Express Server)
-Setup Frontend project (React app)
-Add router for '/cakes' endpoint
-Manual test of functionality server functionality using Postman
-Create basic page structure
-Introduce Routing with react-router-dom package
-Connect frontend to backend
-Display returned cake list information
-Display singular cake information
-Add form within a modal for creating a new cake
-Manually test that all functionality now exists
-Failure of previous point led to adding cloud based MongoDB persistence layer
-Retest of functionality
-Test of functionality on Mobile (currently failed and being looked into, see **Know problems** below)
+- Understanding product definition
+- Defining goals and workflow
+- Setup Backend project (Express Server)
+- Setup Frontend project (React app)
+- Add router for '/cakes' endpoint
+- Manual test of functionality server functionality using Postman
+- Create basic page structure
+- Introduce Routing with react-router-dom package
+- Connect frontend to backend
+- Display returned cake list information
+- Display singular cake information
+- Add form within a modal for creating a new cake
+- Manually test that all functionality now exists
+- Failure of previous point led to adding cloud based MongoDB persistence layer
+- Retest of functionality
+- Test of functionality on Mobile (currently failed and being looked into, see **Know problems** below)
 
 ## Known problems and next steps
 
