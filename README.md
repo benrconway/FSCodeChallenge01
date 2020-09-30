@@ -38,13 +38,13 @@ A frontend that fulfills the following functionality:
 - [x] Create basic page structure
 - [x] Introduce Routing with react-router-dom package
 - [x] Connect frontend to backend
-- [x]. Display returned cake list information
-- [x]. Display singular cake information
-- [x]. Add form within a modal for creating a new cake
-- [x]. Manually test that all functionality now exists
-- [x]. Failure of previous point led to adding cloud based MongoDB persistence layer
-- [x]. Retest of functionality
-- [x]. Test of functionality on Mobile (currently failed and being looked into, see **Know problems** below)
+- [x] Display returned cake list information
+- [x] Display singular cake information
+- [x] Add form within a modal for creating a new cake
+- [x] Manually test that all functionality now exists
+- [x] Failure of previous point led to adding cloud based MongoDB persistence layer
+- [x] Retest of functionality
+- [x] Test of functionality on Mobile (currently failed and being looked into, see **Know problems** below)
 
 ## Known problems and next steps
 
